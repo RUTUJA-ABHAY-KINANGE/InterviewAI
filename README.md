@@ -126,7 +126,7 @@ python -m venv venv
 
 #4️⃣ Activate the Virtual Environment
 
-# Command Prompt
+#Command Prompt
 
 bash
 venv\Scripts\activate
