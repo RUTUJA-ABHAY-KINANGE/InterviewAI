@@ -1,0 +1,316 @@
+# InterviewAI 
+
+# AI-Powered Mock Interview & Candidate Evaluation Agent
+
+# Overview
+
+InterviewAI is an end-to-end AI-powered interview assistant that automates the technical interview process using a Large Language Model (LLM).
+
+The application accepts candidate details and a target job role, generates role-specific interview questions, collects candidate responses, evaluates each answer using AI, and produces a structured interview assessment report with scores, strengths, weaknesses, and recommendations.
+
+Additionally, the application stores interview records in JSON format, demonstrating a complete AI agent workflow from user input to AI reasoning and persistent storage.
+
+# Key Features
+
+- AI-generated role-specific interview questions
+- Supports multiple technical job roles
+- Candidate answer submission
+- AI-powered interview evaluation
+- Per-question assessment
+- Overall interview score
+- Strengths and weaknesses analysis
+- Final hiring recommendation
+- Stores interview history in JSON
+- Responsive Bootstrap-based interface
+
+
+# AI Agent Workflow
+
+The application follows a complete AI Agent architecture.
+
+
+                User Input
+                     │
+                     ▼
+      Candidate Details + Job Role
+                     │
+                     ▼
+      AI Generates Interview Questions
+                     │
+                     ▼
+       Candidate Answers Questions
+                     │
+                     ▼
+      AI Evaluates Candidate Answers
+                     │
+                     ▼
+       Generates Interview Report
+                     │
+                     ▼
+      Stores Interview Record (JSON)
+                     │
+                     ▼
+         Displays Final Evaluation
+
+
+
+# Technology Stack
+
+| Technology | Purpose |
+|------------|---------|
+| Python 3.11 | Programming Language |
+| Flask | Backend Framework |
+| Groq API (Llama 3.1) | Large Language Model |
+| HTML5 | Frontend |
+| CSS3 | Styling |
+| JSON | Data Storage |
+| python-dotenv | Environment Variable Management |
+
+
+# Project Structure
+
+
+InterviewAI/
+│
+├── app.py
+├── requirements.txt
+├── README.md
+├── .gitignore
+├── .env.example
+│
+├── templates/
+│   ├── index.html
+│   ├── interview.html
+│   └── result.html
+│
+├── static/
+│   └── style.css
+│
+├── prompts/
+│   ├── question_prompt.txt
+│   └── evaluation_prompt.txt
+│
+├── utils/
+│   └── ai.py
+│
+├── data/
+│   └── interviews.json
+│
+└── screenshots/
+    ├── home.png
+    ├── interview.png
+    └── result.png
+
+
+# Installation & Setup
+
+#1️⃣ Clone the Repository
+
+bash
+git clone https://github.com/your-username/InterviewAI-Agent.git
+
+
+#2️⃣ Navigate to the Project
+
+bash
+cd InterviewAI-Agent
+
+# 3️⃣ Create a Virtual Environment
+
+Windows
+
+bash
+python -m venv venv
+
+
+
+#4️⃣ Activate the Virtual Environment
+
+# Command Prompt
+
+bash
+venv\Scripts\activate
+```
+
+#Git Bash
+
+bash
+source venv/Scripts/activate
+
+
+
+## 5️⃣ Install Dependencies
+
+bash
+pip install -r requirements.txt
+
+
+
+#6️⃣ Configure Environment Variables
+
+Create a file named
+
+.env
+
+Add your Groq API key.
+
+
+GROQ_API_KEY=your_groq_api_key_here
+
+
+You can obtain a free API key from:
+
+https://console.groq.com
+
+
+
+#7️⃣ Run the Application
+
+bash
+python app.py
+
+
+Open your browser and visit
+
+http://127.0.0.1:5000
+
+
+---
+
+# 📋 Application Workflow
+
+1. Enter Candidate Name.
+2. Select the desired Job Role.
+3. Click **Start Interview**.
+4. AI generates five role-specific interview questions.
+5. Candidate answers all questions.
+6. AI evaluates the responses.
+7. A structured interview report is generated.
+8. The interview record is stored in JSON format.
+
+
+# 👨‍💻 Supported Job Roles
+
+- AI Research Associate
+- Python Developer
+- Backend Developer
+- Frontend Developer
+- Data Analyst
+
+
+
+
+# 📋 Sample Output
+
+```
+Candidate: XYZ
+
+Role: Python Development
+
+Question 1
+Score: 8/10
+
+Strength:
+Good understanding of Python fundamentals.
+
+Weakness:
+Could explain decorators in more detail.
+
+Suggestion:
+Practice advanced Python concepts.
+
+
+Question 2
+Score: 9/10
+
+...
+
+
+Overall Score:
+42 / 50
+
+Strengths
+
+• Strong programming fundamentals
+• Logical problem solving
+• Good communication
+
+Weaknesses
+
+• Needs better SQL knowledge
+• Improve Prompt Engineering concepts
+
+Recommendation
+
+Selected
+
+
+# esign Decisions
+
+#Why Flask?
+
+Flask was chosen because it is lightweight, beginner-friendly, and ideal for rapid development within the challenge timeline.
+
+# hy Groq?
+
+Groq provides free, fast inference for Llama models, making it an excellent choice for building AI-powered applications without additional cost.
+
+# hy JSON Storage?
+
+JSON provides a simple persistence mechanism without requiring database setup, making the application easy to run and review.
+
+# hy External Prompt Files?
+
+Prompt templates are separated from application logic to improve maintainability and make prompt updates easier without modifying source code.
+
+
+
+# rade-offs
+
+- Used JSON instead of a relational database to simplify deployment.
+- AI responses may vary slightly because they are generated by an LLM.
+- Authentication and user management were intentionally omitted to keep the focus on the AI workflow.
+- Optimized for clarity, maintainability, and completion within the challenge time constraints.
+
+
+<!-- # Future Improvements
+
+- Resume-based personalized interviews
+- Voice-based interviews (Speech-to-Text)
+- PDF interview report generation
+- Admin dashboard for interview history
+- SQLite/MySQL database integration
+- User authentication
+- Multi-language support
+- Real-time coding assessments
+- Advanced scoring using semantic similarity and embeddings -->
+
+
+
+# Requirements
+
+- Python 3.11 or above
+- Groq API Key
+- Internet Connection
+
+
+# 👩‍💻 Author
+
+**Rutuja Kinange**
+
+Bachelor of Engineering (Computer Science & Engineering)
+
+Developed for the **Rooman Technologies – Junior AI Research Associate AI Challenge**
+
+
+
+# 🙏 Acknowledgements
+
+This project was developed as part of the **Rooman Technologies AI Agent Challenge**.
+
+It demonstrates the practical integration of Large Language Models (LLMs), prompt engineering, Flask web development, and AI-assisted candidate evaluation to build an end-to-end AI-powered interview agent.
+
+
+# License
+
+This project is intended for educational purposes and the Rooman Technologies AI Challenge submission.
